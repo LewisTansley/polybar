@@ -618,7 +618,7 @@ void bar::reconfigure_wm_hints() {
   icccm_util::set_wm_name(m_connection, win, m_opts.wmname.c_str(), m_opts.wmname.size(), "polybar\0Polybar", 15_z);
 
   m_log.trace("bar: Set window _NET_WM_WINDOW_TYPE");
-  ewmh_util::set_wm_window_type(win, {_NET_WM_WINDOW_TYPE_DOCK});
+  ewmh_util::set_wm_window_type(win, {_NET_WM_WINDOW_TYPE_NORMAL});
 
   m_log.trace("bar: Set window _NET_WM_STATE");
   ewmh_util::set_wm_state(win, {_NET_WM_STATE_STICKY, _NET_WM_STATE_ABOVE});
